@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{4D4A1082-D51E-466F-B588-91158AFCACC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVM", "MVVM\MVVM.csproj", "{9B1852D0-27F2-49FC-8D1A-908B1CF8DFD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{4D4A1082-D51E-466F-B588-91158AFCACC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D4A1082-D51E-466F-B588-91158AFCACC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D4A1082-D51E-466F-B588-91158AFCACC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B1852D0-27F2-49FC-8D1A-908B1CF8DFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B1852D0-27F2-49FC-8D1A-908B1CF8DFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B1852D0-27F2-49FC-8D1A-908B1CF8DFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B1852D0-27F2-49FC-8D1A-908B1CF8DFD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
