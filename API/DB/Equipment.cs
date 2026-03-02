@@ -37,3 +37,6 @@ public partial class Equipment
 
     public virtual ICollection<Inventoryrecord> Inventoryrecords { get; set; } = new List<Inventoryrecord>();
 }
+
+
+

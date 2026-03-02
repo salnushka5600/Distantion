@@ -53,7 +53,6 @@
                         </Style>
                     </Button.Styles>
                 </Button>
-
                 <ProgressBar IsVisible="{Binding IsLoading}"
                              IsIndeterminate="True"
                              Width="260"

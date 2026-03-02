@@ -20,7 +20,6 @@ public class EquipmentController: Controller
     {
         this.db = db;        
     }
-
     [Authorize(Roles = "Accountant")]
     [HttpGet]
     public async Task<ActionResult<List<EquipmentResponse>>> GetAllEquipments([FromQuery] int page = 1, [FromQuery]  int pageSize = 20, [FromQuery] string? status = null)

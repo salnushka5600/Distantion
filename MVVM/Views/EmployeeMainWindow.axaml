@@ -36,8 +36,7 @@
         </Style>
 
     </TabControl.Styles>
-
-
+        
     <TabItem Header="Моё оборудование">
         <StackPanel Margin="20" Spacing="12">
 

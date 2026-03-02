@@ -167,7 +167,6 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </StackPanel>
-
             <StackPanel Grid.Column="1"
                         Grid.Row="2"
                         HorizontalAlignment="Center"
