@@ -7,63 +7,69 @@
         Width="500" Height="400"
         Background="#C6B6E2"> 
 
-    <Grid RowDefinitions="*,Auto,Auto,*" ColumnDefinitions="*">
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="15">
+  <Grid RowDefinitions="*,Auto,Auto,*" ColumnDefinitions="*" Background="#FFF9FB">
 
-            <TextBlock Text="Логин" FontSize="18" FontWeight="Bold" Foreground="#FFF8F0" HorizontalAlignment="Left"/>
+    <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="18">
 
-            <TextBox Width="250" Text="{Binding Username, Mode=TwoWay}" 
-                     Background="#FFF8F0" Foreground="#4B3F2F" 
-                     BorderBrush="#5C2E00" BorderThickness="1" CornerRadius="5"
-                     CaretBrush="#4B3F2F">
-                <TextBox.Styles>
-                    <Style Selector="TextBox:focus">
-                        <Setter Property="Background" Value="#FFF8F0"/>
-                        <Setter Property="Foreground" Value="#4B3F2F"/>
-                    </Style>
-                </TextBox.Styles>
-            </TextBox>
+        <Border Background="White" Padding="30" CornerRadius="16" BorderBrush="#F9A8D4" BorderThickness="1">
 
-            <TextBlock Text="Пароль" FontSize="18" FontWeight="Bold" Foreground="#FFF8F0" HorizontalAlignment="Left"/>
+            <StackPanel Spacing="16">
 
-            <TextBox Width="250" Watermark="Пароль" Text="{Binding Password, Mode=TwoWay}" PasswordChar="●"
-                     Background="#FFF8F0" Foreground="#4B3F2F" 
-                     BorderBrush="#5C2E00" BorderThickness="1" CornerRadius="5"
-                     CaretBrush="#4B3F2F">
-                <TextBox.Styles>
-                    <Style Selector="TextBox:focus">
-                        <Setter Property="Background" Value="#FFF8F0"/>
-                        <Setter Property="Foreground" Value="#4B3F2F"/>
-                    </Style>
-                </TextBox.Styles>
-            </TextBox>
+                <TextBlock Text="Логин" FontSize="18" FontWeight="SemiBold" Foreground="#9D174D"/>
 
-            <Button Width="150" Height="40" Content="Войти" Command="{Binding LoginCommand}">
-                <Button.Template>
-                    <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="{TemplateBinding BorderThickness}" 
-                                CornerRadius="8">
-                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"
-                                              Content="{TemplateBinding Content}" 
-                                              Foreground="{TemplateBinding Foreground}"/>
-                        </Border>
-                    </ControlTemplate>
-                </Button.Template>
-                <Button.Background>
-                    <SolidColorBrush Color="#7B3F00"/>
-                </Button.Background>
-                <Button.Foreground>
-                    <SolidColorBrush Color="White"/>
-                </Button.Foreground>
-                <Button.BorderBrush>
-                    <SolidColorBrush Color="#5C2E00"/>
-                </Button.BorderBrush>
-            </Button>
+                <TextBox Width="260" Text="{Binding Username, Mode=TwoWay}" Background="#FFF1F6" Foreground="#4B5563" BorderBrush="#F472B6" BorderThickness="1" CornerRadius="8" CaretBrush="#BE185D">
 
-            <ProgressBar IsVisible="{Binding IsLoading}" IsIndeterminate="True" Width="250" Height="6" Foreground="#D2B48C"/>
-            <TextBlock Text="{Binding ErrorMessage}" Foreground="Red" HorizontalAlignment="Center"/>
-        </StackPanel>
-    </Grid>
+                    <TextBox.Styles>
+                        <Style Selector="TextBox:focus">
+                            <Setter Property="BorderBrush" Value="#EC4899"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Style>
+                    </TextBox.Styles>
+                </TextBox>
+
+                <TextBlock Text="Пароль" FontSize="18" FontWeight="SemiBold" Foreground="#9D174D"/>
+
+                <TextBox Width="260" Watermark="Пароль" Text="{Binding Password, Mode=TwoWay}" PasswordChar="●" Background="#FFF1F6" Foreground="#4B5563" BorderBrush="#F472B6" BorderThickness="1" CornerRadius="8" CaretBrush="#BE185D">
+
+                    <TextBox.Styles>
+                        <Style Selector="TextBox:focus">
+                            <Setter Property="BorderBrush" Value="#EC4899"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Style>
+                    </TextBox.Styles>
+                </TextBox>
+
+                <Button Width="160"
+                        Height="42"
+                        Content="Войти"
+                        Command="{Binding LoginCommand}"
+                        Background="#EC4899"
+                        Foreground="Pink"
+                        CornerRadius="10">
+
+                    <Button.Styles>
+                        <Style Selector="Button:hover">
+                            <Setter Property="Background" Value="#BE185D"/>
+                        </Style>
+                    </Button.Styles>
+                </Button>
+
+                <ProgressBar IsVisible="{Binding IsLoading}"
+                             IsIndeterminate="True"
+                             Width="260"
+                             Height="6"
+                             Foreground="#EC4899"
+                             Background="#FCE7F3"/>
+
+                <TextBlock Text="{Binding ErrorMessage}"
+                           Foreground="#DC2626"
+                           HorizontalAlignment="Center"
+                           FontWeight="SemiBold"/>
+
+            </StackPanel>
+
+        </Border>
+
+    </StackPanel>
+</Grid>
 </Window>
